@@ -43,9 +43,9 @@
         <h1>Суггестия. Разметка текста</h1>
 
 <?php
-define('DB_USER', ""); //логин админа БД
-define('DB_PASSWORD', ""); // пароль админа БД
-define('DB_DATABASE', ""); // база данных
+define('DB_USER', "c19009"); //логин админа БД
+define('DB_PASSWORD', "ZllsT7zv"); // пароль админа БД
+define('DB_DATABASE', "c19009_main"); // база данных
 define('DB_SERVER', "localhost"); // сервер 'localhost'
 
 $connection = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
@@ -73,7 +73,7 @@ if ($num_results != 0) {
 			$text = $row['text'];
         		echo "<h5>Не размечено: ".$num_results."</h5>\n";
         		if ($num_results_ready == 0) {
-        		    echo "<h5>Размечено 0: с суггестией - 0 (0%), без суггестии - 0%)</h5>\n";
+        		    echo "<h5>Размечено 0: с суггестией - 0 (0%), без суггестии - 0 (0%)</h5>\n";
         		} else {
             		echo "<h5>Размечено ".$num_results_ready.": с суггестией - ".$num_results_suggest." (".round($num_results_suggest/$num_results_ready*100, 1)."%), без суггестии - ".($num_results_ready-$num_results_suggest)." (".round(($num_results_ready-$num_results_suggest)/$num_results_ready*100, 1)."%)</h5>\n";
         		}
